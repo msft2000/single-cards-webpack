@@ -45,7 +45,7 @@ module.exports={
                     options:{
                         limit: 10000,
                         mimetype: "application/font-woff",
-                        name: "[name].[contenthash].[ext]",
+                        name: "[name].[ext]",
                         outputPath: "./assets/fonts/",
                         publicPath: "../assets/fonts/",
                         esModule: false,

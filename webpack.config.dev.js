@@ -12,7 +12,6 @@ module.exports={
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     mode: 'development',
-    watch: true,
     resolve:{
         extensions: ['.js'],
         alias:{
@@ -46,7 +45,7 @@ module.exports={
                     options:{
                         limit: 10000,
                         mimetype: "application/font-woff",
-                        name: "[name].[contenthash].[ext]",
+                        name: "[name].[ext]",
                         outputPath: "./assets/fonts/",
                         publicPath: "../assets/fonts/",
                         esModule: false,
@@ -72,4 +71,11 @@ module.exports={
             ]
         })
     ],
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        historyApiFallback: true,
+        port: 3006,
+        open: true,
+    }
 }
